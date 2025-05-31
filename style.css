@@ -208,6 +208,11 @@ li{
 }
 
 @media (max-width: 480px){
+
+    body{
+        overflow: scroll;
+    }
+    
     .container-tarefas{
         width: 90%;
         height: 70dvh;
