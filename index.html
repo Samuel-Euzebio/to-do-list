@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./fav-icon.png" type="image/png">
+</head>
+<body>
+    <h1>Lista de tarefas</h1>
+
+    <div class="container">
+        <form>
+            <input type="text" class="tarefa" id="input" placeholder="Digite sua tarefa aqui"/>
+            <button type="submit" id="add" class="add">Adicionar</button>
+        </form>
+
+        
+
+        <ul class="container-tarefas" id="lista" >
+            <div class="controles">
+                <input type="text" class="busca" placeholder="Buscar..."/>
+                <button class="filtro ordenar-nome" id="ordenar-nome">A-Z</button>
+                <button class="filtro" id="ordenar-status">Status</button>
+                <button class="filtro limpar" id="limpar">Limpar</button>
+            </div>
+            <!--Aqui vai ser adicionado o <li>-->
+        </ul>
+    </div>
+    
+<script src="./script.js"></script>
+</body>
+</html>

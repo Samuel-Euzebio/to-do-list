@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poetsen+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(6, 3, 39);
+    overflow: hidden;
+}
+
+h1{
+    color: aliceblue;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 60px;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+form{
+    width: 50%;
+    display: grid;
+    justify-items: center;
+}
+
+.tarefa{
+    width: 60%;
+    height: 50px;
+    margin-top: 100px;
+    border-radius: 15px;
+    background-color: rgb(253, 247, 155);
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    outline: none;
+    border: none;
+    color: black;
+    font-size: 16px;
+}
+
+.container-tarefas{
+    width: 25%;
+    height: 60dvh;
+    border-radius: 5px;
+    background-color: rgb(253, 247, 155);
+    font-family: "Dancing Script", cursive;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.add{
+    width: 30%;
+    height: 50px;
+    border-radius: 15px;
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    background-color: rgb(155, 255, 155);
+    font-size: 25px;
+    color: rgb(6, 3, 39);
+    cursor: pointer;
+    border: none;
+}
+
+.remove{
+    width: 50px;
+    height: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    background-color: rgb(227, 96, 96);
+    color: rgb(6, 3, 39);
+    border: none;
+    font-size: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.edit-button{
+    width: 50px;
+    height: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    background-color: rgb(155, 255, 155);
+    color: rgb(6, 3, 39);
+    border: none;
+    font-size: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.input-erro {
+    border: 2px solid red;
+}
+
+.tarefa-concluida{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+li{
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.editar-input{
+    width: 100%;
+    justify-self: center;
+    font-family: "Dancing Script", cursive;
+    font-size: 18px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.busca{
+    width: 75%;
+    font-family: "Dancing Script", cursive;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: aliceblue;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    cursor: text;
+}
+
+.controles{
+    display: flex;
+    gap: 5px;
+}
+
+.filtro{
+    background-color: aliceblue;
+    font-family: "Dancing Script", cursive;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 5px;
+    width: 30%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.ordenar:hover{
+    background-color: rgba(240, 248, 255, 0.695);
+}
+
+.limpar:hover{
+    background-color: rgb(227, 96, 96);
+}
+
+@media (max-width: 1064px){
+    .container-tarefas{
+        width: 50%;
+        height: 60dvh;
+    }
+
+    form{
+        width: 30%;
+        display: grid;
+        justify-items: center;
+    }
+
+    .add{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 800px){
+    .container-tarefas{
+        width: 45%;
+        height: 70dvh;
+    }
+
+    .container{
+        gap: 10px;
+    }
+
+    form{
+        width: 40%;
+        display: grid;
+    }
+
+    .add{
+        margin-top: -90%;
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .tarefa{
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px){
+    .container-tarefas{
+        width: 90%;
+        height: 70dvh;
+    }
+
+    .container{
+        margin-top: -15%;
+        margin-left: 0px;
+        display: grid;
+        justify-items: center;
+    }
+
+    form{
+        width: 80%;
+        gap: 10px;
+    }
+
+    .add{
+        font-size: 20px;
+        width: 90%;
+        margin-top: 0px;
+    }
+
+    .tarefa{
+        width: 100%;
+        font-size: 14px;
+    }
+}
