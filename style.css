@@ -55,7 +55,7 @@ form{
     background-color: rgb(253, 247, 155);
     font-family: "Dancing Script", cursive;
     padding: 20px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .add{
@@ -111,7 +111,10 @@ form{
 
 li{
     cursor: pointer;
-    margin-top: 10px;
+    display: flex;
+    padding: 10px 10px;
+    border-bottom: 1px solid #585c1e;
+    animation: fadeIn 0.3s ease;
 }
 
 .editar-input{
@@ -161,6 +164,30 @@ li{
 
 .limpar:hover{
     background-color: rgb(227, 96, 96);
+}
+
+.contador{
+    margin: 10px;
+    justify-self: center;
+    font-size: 14px;
+}
+
+.fade-out{
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 
 @media (max-width: 1064px){
