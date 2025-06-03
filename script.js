@@ -31,8 +31,14 @@ function adicionarTarefa(texto = null) {
 
     removeButton.addEventListener('click', (event) => {
         event.stopPropagation();
-        lista.removeChild(newElement);
-        salvarTarefas();
+
+        newElement.classList.add('fade-out');
+
+        newElement.addEventListener('transitionend', () => {
+            lista.removeChild(newElement);
+            atualizarContador();
+            salvarTarefas();
+        }, {once: true});
     });
 
     newElement.appendChild(editButton);
@@ -45,6 +51,7 @@ function adicionarTarefa(texto = null) {
 
     newElement.addEventListener('click', ()=> {
         newElement.classList.toggle('tarefa-concluida');
+        atualizarContador();
         salvarTarefas();
     });
 
@@ -87,6 +94,7 @@ function adicionarTarefa(texto = null) {
 
     });
 
+    atualizarContador();
     salvarTarefas();
 
 };
@@ -168,5 +176,14 @@ botaoLimpar.addEventListener('click', ()=>{
     };
     
 });
+
+function atualizarContador(){
+    const total = lista.querySelectorAll('li').length;
+    const concluidas = lista.querySelectorAll('.tarefa-concluida').length;
+    const pendentes = total - concluidas;
+
+    const contador = document.querySelector('#contador');
+    contador.textContent = `Total: ${total} | Concluídas: ${concluidas} | Pendentes: ${pendentes}`;
+}
 
 carregarTarefas();
